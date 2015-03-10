@@ -12,7 +12,7 @@ You know how to install gems...
 
 In your config.ru file:
 ```ruby
-use RackEnvInjector, 'rack.logger' => my_special_logger
+use RackInjection, 'rack.logger' => my_special_logger
 ```
 Now env['rack.logger'] will refer to `my_special_logger` in every
 request.
