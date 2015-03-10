@@ -1,29 +1,22 @@
 # RackInjection
 
-TODO: Write a gem description
+This very simple gem just provides a middleware named RackInjection that
+allows you to inject arbitrary key-value pairs into the Rack env on every
+request.
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-    gem 'rack_injection'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install rack_injection
+You know how to install gems...
 
 ## Usage
 
-TODO: Write usage instructions here
+In your config.ru file:
+```ruby
+use RackEnvInjector, 'rack.logger' => my_special_logger
+```
+Now env['rack.logger'] will refer to `my_special_logger` in every
+request.
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/rack_injection/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+If send me a pull request, I promise I'll look at it.
