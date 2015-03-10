@@ -1,7 +1,7 @@
-require "rack_injection/version"
-
 # Yes, this is really all it does...
-module RackInjection
+class RackInjection
+  VERSION = "0.2.0"
+
   def initialize(app, opts={})
     @app = app
     @injections = opts
